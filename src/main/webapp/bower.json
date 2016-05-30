@@ -1,0 +1,23 @@
+{
+  "name": "WebContent",
+  "version": "1.0.0",
+  "description": "For JCG RT App part 3",
+  "main": "index.html",
+  "authors": [
+    "Sylvain Cloutier"
+  ],
+  "license": "MIT",
+  "homepage": "http://examples.javacodegeeks.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.7"
+  }
+}
