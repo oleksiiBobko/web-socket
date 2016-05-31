@@ -1,13 +1,15 @@
 {
-  "name": "WebContent",
-  "version": "1.0.0",
-  "description": "For JCG RT App part 3",
-  "main": "index.html",
+  "name": "bower_test",
   "authors": [
-    "Sylvain Cloutier"
-  ],
+    "Oleksii Bobko <skellag@gmail.com>"
+  ],  
+  "description": "getting started with bower",
+  "main": "index.html",
+  "keywords": [
+    "websocket"
+  ],  
   "license": "MIT",
-  "homepage": "http://examples.javacodegeeks.com",
+  "homepage": "", 
   "ignore": [
     "**/.*",
     "node_modules",
@@ -16,7 +18,7 @@
     "tests"
   ],
   "dependencies": {
-    "jQuery": "~2.1.4",
+    "jquery": "~2.1.4",
     "bootstrap": "~3.3.5",
     "angular": "~1.4.7"
   }

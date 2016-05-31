@@ -1,14 +1,15 @@
 taskApp.controller("TaskController", function($http, $scope) {
    
     $scope.getTasks = function() {
-        $http.get("http://127.0.0.1:8080/tasks")
+        $http.get(window.location.href + "tasks")
             .success(function(data) {
                 $scope.tasks = data;
         });
     };
     
     $scope.addTask = function() {
-        $http.post("http://127.0.0.1:8080/tasks", $scope.task)
+    		console.log(window.location.origin);
+        $http.post(window.location.href + "tasks", $scope.task)
             .success(function() {
                 $scope.resetTask();
         });
@@ -26,8 +27,19 @@ taskApp.controller("TaskController", function($http, $scope) {
     $scope.resetTask();
     $scope.getTasks();
     
+    var loc = window.location, new_uri;
+    if (loc.protocol === "https:") {
+        new_uri = "wss:";
+    } else {
+        new_uri = "ws:";
+    }
+    new_uri += "//" + loc.host;
+    new_uri += loc.pathname + "channel/task";
+    
+    console.log("new = " + new_uri);
+    
     // WebSocket Initialization
-    var taskSocket = new WebSocket("ws://127.0.0.1:8080/channel/task");
+    var taskSocket = new WebSocket(new_uri);
  
     taskSocket.onmessage = function(message) {
         $scope.tasks = JSON.parse(message.data);
