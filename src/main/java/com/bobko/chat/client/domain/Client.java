@@ -13,7 +13,7 @@ public class Client {
 	private final Session session;
 	
 	public Client(Session session) {
-		//some text
+		//some text - test branch
 		this.id = this.toString();
 		this.session = session;
 	}
