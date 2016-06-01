@@ -19,6 +19,7 @@ public class Client {
 	
 	public Client(Session session) {
 		LOG.info("instantiated");
+		//some text
 		this.id = this.toString();
 		this.session = session;
 	}
