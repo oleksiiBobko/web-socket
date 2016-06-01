@@ -1,6 +1,7 @@
 /*1*/
 /*2*/
 /*3*/
+/*4*/
 package com.bobko.chat.client.domain;
 
 import java.io.IOException;
@@ -12,6 +13,7 @@ public class Client {
 	private final Session session;
 	
 	public Client(Session session) {
+		//some text
 		this.id = this.toString();
 		this.session = session;
 	}
