@@ -1,3 +1,6 @@
+/*1*/
+/*2*/
+/*3*/
 package com.bobko.chat.client.domain;
 
 import java.io.IOException;
