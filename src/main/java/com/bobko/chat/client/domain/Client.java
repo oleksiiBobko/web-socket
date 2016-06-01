@@ -8,12 +8,17 @@ import java.io.IOException;
 
 import javax.websocket.Session;
 
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
 public class Client {
 	private final String id;
 	private final Session session;
 	
+	private static final Logger LOG = LogManager.getLogger(Client.class);
+	
 	public Client(Session session) {
-		//some text
+		LOG.info("instantiated");
 		this.id = this.toString();
 		this.session = session;
 	}
